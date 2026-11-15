@@ -1,0 +1,56 @@
+
+version: 2
+
+models:
+    - name: raw_movies
+      description: "A starter dbt model"
+      columns:
+          - name: movie_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: raw_genome_scores
+      description: "A starter dbt model"
+      columns:
+          - name: movie_id
+            description: "The primary key for this table"
+            tests:
+                #unique
+                - not_null
+
+
+    - name: raw_genome_tags
+      description: "A starter dbt model"
+      columns:
+          - name: tag_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: raw_ratings
+      description: "A starter dbt model"
+      columns:
+          - name: user_id
+            description: "The primary key for this table"
+            tests:
+                #unique
+                - not_null
+
+    - name: raw_tags
+      description: "A starter dbt model"
+      columns:
+          - name: user_id
+            description: "The primary key for this table"
+            tests:
+                #unique
+                - not_null
+
+    - name: raw_links
+      description: "A starter dbt model"
+      columns:
+          - name: movie_id
+            description: "The primary key for this table"
+            
